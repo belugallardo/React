@@ -1,0 +1,7 @@
+.navbar{
+    list-style-type:none;
+    cursor: pointer;
+}
+ul{
+    display: flex;
+}
