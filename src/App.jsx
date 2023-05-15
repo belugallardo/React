@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
     <Navbar />
     <ItemListContainer greeting={"Fede Galará - Artista "} />
     <ItemCount inicial = {1}  stock = {10} />
+    <ItemDetailContainer />
     </>
   )
 }
