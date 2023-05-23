@@ -14,13 +14,17 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <nav className="navbar-nav">
                         <ul>
-                            <li className='nav-link nav-item'>Bio</li>
-                            <li className='nav-link nav-item'>Statement</li>
+                            <li className='nav-link nav-item'>
+                            <NavLink to= {'/categoria/1'}> Obra 2020 </NavLink>
+                            </li>
+                            <li className='nav-link nav-item'>
+                            <NavLink to= {'/categoria/2'}>Obra 2021</NavLink>
+                            </li>
                             <li className='nav-link nav-item' > 
-                            <NavLink to= {"/categoria/3"}> Obra </NavLink>
+                            <NavLink to= {'/categoria/3'}> Obra 2022</NavLink>
                             </li>
                             <li className='nav-link nav-item'> 
-                            <NavLink to={ "/categoria/2"}> Shop </NavLink>
+                            <NavLink to={ '/categoria/4'}> Obra 2023 </NavLink>
                             </li>
                         </ul>
                     </nav>
