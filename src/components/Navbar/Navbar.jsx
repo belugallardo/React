@@ -1,11 +1,13 @@
 import React from 'react'
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
+import { NavLink, Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <header className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <h1>Fede Galará</h1>
+            <Link to={"/"}> <h1>Fede Galará</h1> </Link>
+                
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
                 </button>
@@ -14,8 +16,12 @@ const Navbar = () => {
                         <ul>
                             <li className='nav-link nav-item'>Bio</li>
                             <li className='nav-link nav-item'>Statement</li>
-                            <li className='nav-link nav-item' >Obra</li>
-                            <li className='nav-link nav-item'>Shop</li>
+                            <li className='nav-link nav-item' > 
+                            <NavLink to= {"/categoria/3"}> Obra </NavLink>
+                            </li>
+                            <li className='nav-link nav-item'> 
+                            <NavLink to={ "/categoria/2"}> Shop </NavLink>
+                            </li>
                         </ul>
                     </nav>
                 </div>
