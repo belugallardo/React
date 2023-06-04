@@ -4,14 +4,20 @@ import { useState, createContext } from "react";
 
 //Creo el contexto
 
-export const CarritoContext = createContext({ carrito: [] });
+export const CarritoContext = createContext({ 
+    carrito: [],
+    total: 0,
+    cantidadTotal:0
+});
+
 
 // Creo el componente "CarritoProvider"
 
 export const CarritoProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
+    const [total, setTotal] = useState(0);
+    const [cantidadTotal, setCantidadTotal] = useState(0);
 
-    console.log(carrito);
 
     // Agrego metodos:
 
@@ -23,6 +29,8 @@ export const CarritoProvider = ({ children }) => {
             // Si el producto no existe lo agrego
 
             setCarrito(prev => [...prev, { item, cantidad }]);
+            setTotal(prev => prev + (item.precio * cantidad));
+            setCantidadTotal (prev => prev + cantidad);
 
         } else {
             const carritoActualizado = carrito.map(prod => {
@@ -33,6 +41,8 @@ export const CarritoProvider = ({ children }) => {
                 }
             });
             setCarrito(carritoActualizado);
+            setTotal(prev => prev + (item.precio * cantidad));
+            setCantidadTotal (prev => prev + cantidad);
         }
 
     }
@@ -40,19 +50,24 @@ export const CarritoProvider = ({ children }) => {
     // Funcion para eliminar productos del carrito
 
     const eliminarProducto = (id) => {
-        const carritoActualizado = carrito.filter(prod => prod.id != id);
+        const productoEliminado = carrito.find(prod => prod.item.id === id);
+        const carritoActualizado = carrito.filter(prod => prod.item.id != id);
         setCarrito(carritoActualizado);
-    }
+        setCantidadTotal ( prev => prev - productoEliminado.cantidad);
+        setTotal( prev => prev - productoEliminado.item.precio * productoEliminado.cantidad);
+    }   
 
     // Funcion vaciar carrito:
 
     const vaciarCarrito = () => {
         setCarrito([]);
+        setCantidadTotal(0);
+        setTotal(0);
     }
 
     // Retorno el CarritoContext.Provider
     return (
-        < CarritoContext.Provider value={{ carrito, agregarProducto, eliminarProducto, vaciarCarrito }}>
+        < CarritoContext.Provider value={{ carrito, agregarProducto, eliminarProducto, vaciarCarrito, total, cantidadTotal }}>
             {children}
         </ CarritoContext.Provider>
 
