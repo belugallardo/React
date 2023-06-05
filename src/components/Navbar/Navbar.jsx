@@ -15,16 +15,19 @@ const Navbar = () => {
                     <nav className="navbar-nav">
                         <ul>
                             <li className='nav-link nav-item'>
-                            <NavLink to= {'/categoria/1'}> Obra 2020 </NavLink>
+                            <NavLink to= {'/categoria/1'}> Obra 2017 </NavLink>
                             </li>
                             <li className='nav-link nav-item'>
-                            <NavLink to= {'/categoria/2'}>Obra 2021</NavLink>
+                            <NavLink to= {'/categoria/2'}>Obra 2018</NavLink>
                             </li>
                             <li className='nav-link nav-item' > 
-                            <NavLink to= {'/categoria/3'}> Obra 2022</NavLink>
+                            <NavLink to= {'/categoria/3'}> Obra 2019</NavLink>
                             </li>
                             <li className='nav-link nav-item'> 
-                            <NavLink to={ '/categoria/4'}> Obra 2023 </NavLink>
+                            <NavLink to={ '/categoria/4'}> Obra 2020 </NavLink>
+                            </li>
+                            <li className='nav-link nav-item'> 
+                            <NavLink to={ '/categoria/5'}> Obra 2021 </NavLink>
                             </li>
                         </ul>
                     </nav>
