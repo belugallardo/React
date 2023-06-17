@@ -1,32 +1,17 @@
-import './ItemCount.css'
-import { useState } from 'react'
+import './ItemCount.css';
+import { useState } from 'react';
+import CountButtons from '../CountButtons/CountButtons';
 
 const ItemCount = ({ stock, inicial, funcionAgregar }) => {
-    const [itemCount, setItemCount] = useState(inicial)
-
-
-
-    const aumentarCount = () => {
-        if (itemCount < stock) {
-            setItemCount(itemCount + 1);
-        }
-    }
-
-    const disminuirCount = () => {
-        if (itemCount > inicial) {
-            setItemCount(itemCount - 1);
-        }
-    }
+    const [itemCount, setItemCount] = useState(inicial);
 
     return (
         <>
-            <button onClick={disminuirCount}> - </button>
-            <strong> {itemCount} </strong>
-            <button onClick={aumentarCount}> + </button>
+            <CountButtons itemCount={itemCount} stock={stock} inicial={inicial} setItemCount={setItemCount} />
             <br /><br />
-            <button onClick={() => funcionAgregar(itemCount)}> Agregar al carrito  </button>
+            <button onClick={() => funcionAgregar(itemCount)}> Agregar al carrito </button>
         </>
     )
 }
 
-export default ItemCount
+export default ItemCount;

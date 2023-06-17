@@ -13,7 +13,7 @@ const ItemDetail = ({ id, nombre, precio, img, descripcion, stock, medidas }) =>
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
     // console.log("Productos Agregados: " + cantidad);
-    const item = { id, nombre, precio };
+    const item = { id, nombre, precio, stock };
     agregarProducto(item, cantidad);
   }
   return (
@@ -23,6 +23,7 @@ const ItemDetail = ({ id, nombre, precio, img, descripcion, stock, medidas }) =>
       <h3>ID: {id} </h3>
       <p> {descripcion} </p>
       <p> {medidas} </p>
+
       <img src={img} alt={nombre} />
       <br /> <br />
       {
