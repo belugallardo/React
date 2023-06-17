@@ -4,3 +4,8 @@
 .contenedor{
     display: block;
 }
+.numCarrito{
+    text-decoration: none;
+    color: gray;
+}
+

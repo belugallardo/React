@@ -1,1 +1,32 @@
- 
+.tituloCheckout {
+    background-color: #d6ccc2;
+    font-size: x-large;
+
+}
+
+.itemForm {
+    margin: 2px;
+    font-size: medium;
+    display: flex;
+    justify-content: space-between
+}
+
+.inputForm {
+    background-color: #edede9;
+}
+
+.textForm {
+    margin-right: 10px;
+}
+
+.contenedorForm {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 1%;
+    border-style: groove;
+    border-color: #d6ccc2;
+}
+
+.error{
+    color:rgb(192, 40, 40);
+}
