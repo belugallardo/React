@@ -1,25 +1,83 @@
-.cardProducto{
-    background-color: bisque;
-    border-radius:  10px;
-    width: 15rem;
-    padding: 1rem;
-    margin: 1rem;
+section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 1%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cardProducto {
+
+    width: 20rem;
+    height: 36rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 
 }
 
 .imgProducto {
-    width: 150px;
-    object-fit: contain;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 87%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+
 }
 
-.btnProducto{
-    background-color: darkcyan;
-    color: aliceblue;
-    font-size: 1.2rem;
-    width: 8rem;
-    border-radius: 10px;
-    border: none;
+.h2 {
+    position: absolute;
+    inset: auto 30px 20px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:larger;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: gray;
+    
+
+}
+
+.btnProducto {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+    inset: auto 30px 40px 30px;
+    color: gray;
+    text-decoration: none;
+}
+
+.p {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+    inset: auto 30px 80px 30px;
+    color: gray;
+}
+
+.cardProducto:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset .3s ease-out;
+}
+
+.cardProducto:hover p,
+.cardProducto:hover .btnProducto {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+.cardProducto:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 0.3;
+    height: 100%;
 }

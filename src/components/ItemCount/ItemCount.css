@@ -1,0 +1,12 @@
+.buttonAdd{
+    background: #fff;
+    color: grey;
+    border: 2px solid #d6ccc2;
+    padding: 5px ;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px;
+}

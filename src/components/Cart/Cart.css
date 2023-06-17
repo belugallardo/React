@@ -1,0 +1,10 @@
+.tituloCart{
+    background-color: #edede9;
+    font-size: x-large;
+    text-align: left;
+}
+.detalleCart{
+    background-color: grey;
+    font-size: medium;
+    color: #fff;
+}

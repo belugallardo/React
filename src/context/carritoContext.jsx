@@ -1,5 +1,3 @@
-// Voy a importar el Hook useState y createContext
-
 import { useState, createContext } from "react";
 
 //Creo el contexto

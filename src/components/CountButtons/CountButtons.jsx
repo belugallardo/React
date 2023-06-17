@@ -15,9 +15,9 @@ const CountButtons = ({ itemCount, stock, inicial, setItemCount }) => {
 
     return (
         <div>
-            <button onClick={disminuirCount}> - </button>
-            <strong> {itemCount} </strong>
-            <button onClick={aumentarCount}> + </button>
+            <button className='button' onClick={disminuirCount}> - </button>
+            <strong className='contadorBoton'>  {itemCount} </strong>
+            <button className='button' onClick={aumentarCount}> + </button>
         </div>
     );
 }

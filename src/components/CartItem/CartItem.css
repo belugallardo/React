@@ -1,0 +1,11 @@
+
+.tituloDetalle{
+    font-size: large;
+    padding: 0.5px;
+    text-transform: uppercase;
+    background-color:#d6ccc2 ;
+}
+.parrafoDetalle{
+font-size: medium;
+margin: 2px;
+}

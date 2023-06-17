@@ -4,15 +4,11 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import { getDoc, doc} from 'firebase/firestore';
 import { db } from '../../services/config';
+import './ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState(null);
     const {idItem} = useParams();
-
-    // useEffect(() => {
-    //     getUnProducto(idItem)
-    //         .then(res => setProducto(res))
-    // }, [idItem])
 
 
     useEffect (() => {

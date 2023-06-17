@@ -2,9 +2,38 @@
     text-align: center;
     border: 1px solid whitesmoke;
     margin: 3rem;
-
 }
 
 img {
     width: 50vw;
+}
+.tituloDetail{
+    color: #edede9;
+    background-color: #d6ccc2;
+}
+
+.imagenDetail{
+    margin-bottom: 10px;
+    width: 45%;
+}
+
+.parrafoDetail{
+    font-size: small;
+}
+.buttonAdd{
+    background: #fff;
+    color: grey;
+    border: 2px solid #d6ccc2;
+    padding: 5px ;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px;
+}
+
+.buttonCompra{
+    text-decoration: none;
+    color: gray;
 }

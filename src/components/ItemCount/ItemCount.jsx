@@ -8,8 +8,7 @@ const ItemCount = ({ stock, inicial, funcionAgregar }) => {
     return (
         <>
             <CountButtons itemCount={itemCount} stock={stock} inicial={inicial} setItemCount={setItemCount} />
-            <br /><br />
-            <button onClick={() => funcionAgregar(itemCount)}> Agregar al carrito </button>
+            <button className='buttonAdd' onClick={() => funcionAgregar(itemCount)}> Agregar al carrito </button>
         </>
     )
 }

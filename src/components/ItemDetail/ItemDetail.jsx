@@ -12,31 +12,28 @@ const ItemDetail = ({ id, nombre, precio, img, descripcion, stock, medidas }) =>
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    // console.log("Productos Agregados: " + cantidad);
-    const item = { id, nombre, precio, stock };
+    const item = { id, nombre, precio, stock, img };
     agregarProducto(item, cantidad);
   }
   return (
     <div className='contenedorItem'>
-      <h2> Obra: {nombre} </h2>
-      <h3>Precio: USD {precio} </h3>
-      <h3>ID: {id} </h3>
-      <p> {descripcion} </p>
-      <p> {medidas} </p>
+      <h2 className='tituloDetail'> {nombre} </h2>
+      <img src={img} alt={nombre} className='imagenDetail' />
+      <p className='parrafoDetail'> {descripcion} </p>
+      <p className='parrafoDetail'>Precio: USD {precio} </p>
+      <p className='parrafoDetail'> Medidas: {medidas} </p>
 
-      <img src={img} alt={nombre} />
-      <br /> <br />
+
       {
 
-        agregarCantidad > 0 ? (
-        <div>
-        <Link to="/cart">Terminar compra</Link>
-        <br />
-        <Link to="/">Seguir comprando</Link>
-        
-        </div>
+        agregarCantidad > 0 || stock == 0 ? (
+          <div>
+            <button className='buttonAdd'> <Link to="/cart" className='buttonCompra'>Terminar compra</Link></button>
+            <button className='buttonAdd'> <Link to="/" className='buttonCompra'>Seguir comprando</Link> </button>
+
+          </div>
         ) : (
-        <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
+          <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
       }
     </div>
   )

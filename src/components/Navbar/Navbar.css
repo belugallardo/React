@@ -1,7 +1,27 @@
-.navbar{
-    list-style-type:none;
-    cursor: pointer;
-}
 ul{
     display: flex;
+    justify-content:center;
+    margin-top: 1%;
+    
+    
+}
+.logoFede{
+    width: 70px;
+}
+
+.fuente{
+    padding: 18px;
+    cursor: pointer;
+    transition: color .3s ease-out;
+    text-decoration: none;
+    color: #111;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 5px 0;
+}
+.fuente:hover{
+    background-color: #d5bdaf;
+    border-radius: 20px;
+    color: #fff;
 }
